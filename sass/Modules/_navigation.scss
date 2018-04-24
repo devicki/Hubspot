@@ -1,0 +1,53 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        flex: 0 1 auto;
+    }
+    ul.navigationList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+        a {
+            color: $greenlike;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 2.4rem;
+            &.grow::after {
+                content: ' ';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 0%;
+                height: 3px;
+                border-bottom: 1px solid $huborange;
+                transition: 0.4s;
+            }
+            &.grow:hover::after {
+                width: 100%;
+                left: 0;
+            }
+        } // Search module
+        li input {
+            border: none;
+            height: 2.5rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        li:last-child::before {
+            content: "\007c";
+            vertical-align: top;
+            font-size: 3rem;
+            margin-right: 4rem;
+        }
+        & .ion-android-search {
+            font-size: 3.3rem;
+            margin-left: 2rem;
+        }
+    }
+}
