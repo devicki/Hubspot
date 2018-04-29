@@ -1,0 +1,17 @@
+.btn {
+    padding: 1.2rem 2rem;
+    border-radius: 4px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &--primary {
+        background: transparent;
+        border: 3px solid rgb(0, 0, 0);
+    }
+    &--info {
+        background: $huborange;
+        border: 3px solid $huborange;
+    }
+}

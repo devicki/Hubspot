@@ -1,21 +1,72 @@
 .container_offers {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    height: 60rem;
-    .offer-big {
-        grid-column: 2/ 3;
-        grid-row: 1 / 3;
-        background-color: darkcyan;
+    height: 80rem;
+    margin: 10rem 0;
+    font-size: 2.3rem;
+    .offer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        transition: all 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        & h1,
+        p,
+        button {
+            margin: 15px 0;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: -1px -1px 0 rgb(116, 116, 116),
+        }
+        &--big {
+            grid-column: 2/ 3;
+            grid-row: 1 / 3;
+            background: url("/img/pexels-photo-265087.jpeg") no-repeat;
+            background-size: cover;
+            &:hover {
+                background: url("/img/pexels-photo-265087-onhover.jpeg") no-repeat;
+                background-size: cover;
+            }
+        }
+        &--wide {
+            background-color: $greenlike;
+            height: 8rem;
+            grid-column: 1/ 3;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        &--small:first-child {
+            background: url("/img/pexels-photo-574077.jpeg") no-repeat;
+            background-size: cover;
+            &:hover {
+                background: url("/img/pexels-photo-574077-onhover.jpeg") no-repeat;
+                background-size: cover;
+            }
+        }
+        &--small:nth-last-child(2) {
+            background: url("/img/pexels-photo-95916.jpeg") no-repeat;
+            background-size: cover;
+            &:hover {
+                background: url("/img/pexels-photo-95916-onhover.jpeg") no-repeat;
+                background-size: cover;
+            }
+        }
+        .wide-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            .btn--info {
+                margin-left: 3rem;
+            }
+        }
     }
-    .offer-wide {
-        background-color: darkcyan;
-    }
-    .offer-small {
-        background-color: darkcyan;
-    }
-}
-
-html {
-    background-color: #fff;
 }
