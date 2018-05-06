@@ -1,0 +1,40 @@
+.proof_container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    height: 50rem;
+    font-size: 2.3rem;
+    margin: 10rem 0;
+    text-align: center;
+    color: #fff;
+    .quote__box {
+        background-color: $greenlike;
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        p {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+    .res__box {
+        background-color: $greyish;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .all_svg_box {
+            display: flex;
+            .svg {
+                margin: 0 2rem;
+            }
+        }
+    }
+    .crm__box {
+        background-color: $huborange;
+    }
+}
