@@ -1,0 +1,31 @@
+.benefits_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    .title {
+        font-size: 2.9rem;
+        margin-bottom: 4rem;
+        text-transform: uppercase;
+        color: $huborange;
+    }
+    h2.title {
+        margin-bottom: 8rem;
+    }
+}
+
+.benefits__boxes {
+    display: flex;
+    justify-content: center;
+    .bbox {
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;
+        p {
+            text-align: center;
+            line-height: 3rem;
+        }
+    }
+}

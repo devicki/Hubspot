@@ -188,7 +188,7 @@ nav {
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   height: 80rem;
-  margin: 10rem 0;
+  margin-top: 10rem;
   font-size: 2.3rem; }
   .container_offers .offer {
     display: flex;
@@ -241,6 +241,32 @@ nav {
       flex-wrap: wrap; }
       .container_offers .offer .wide-content .btn--info {
         margin-left: 3rem; }
+
+.benefits_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem; }
+  .benefits_container .title {
+    font-size: 2.9rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    color: #F47521; }
+  .benefits_container h2.title {
+    margin-bottom: 8rem; }
+
+.benefits__boxes {
+  display: flex;
+  justify-content: center; }
+  .benefits__boxes .bbox {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem; }
+    .benefits__boxes .bbox p {
+      text-align: center;
+      line-height: 3rem; }
 
 .btn {
   padding: 1.2rem 2rem;
