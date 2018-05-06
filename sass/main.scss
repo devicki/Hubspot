@@ -1,4 +1,5 @@
 @import "Abstracts/_variables.scss";
+@import "Abstracts/_helpers.scss";
 @import "Base/_reset.scss";
 @import "Base/_typography.scss";
 @import "Modules/_wrapper.scss";
@@ -6,4 +7,5 @@
 @import "Modules/_offers.scss";
 @import "Modules/_benefits.scss";
 @import "Modules/_proof.scss";
+@import "Modules/_footer.scss";
 @import "Components/_button.scss";
