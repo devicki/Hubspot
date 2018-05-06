@@ -1,9 +1,9 @@
 footer {
     background-color: #000;
-    color: #fff; // height: 45rem;
-    display: flex; // justify-content: center;
+    color: #fff;
+    display: flex;
     font-size: 2.5rem;
-    padding: 4rem 0; // width: 100%;
+    padding: 4rem 0;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -11,23 +11,56 @@ footer {
         display: flex;
         justify-content: space-between;
         width: 80%;
+        font-size: 4.5rem;
+        margin-bottom: 4rem;
+        h3::before {
+            content: "▶▶";
+            font-size: 4rem;
+            margin-right: 1rem;
+            color: $huborange;
+        }
         ul li {
             display: inline-block;
+            a:hover {
+                color: $huborange;
+            }
+        }
+        ul li:not(:last-of-type) {
+            margin: 0 2rem;
         }
     }
     .middle_boxes_container {
         width: 80%;
         display: flex;
+        margin-bottom: 4rem;
         .setup__box {
             margin: 5rem 0;
             margin-right: 7rem;
+            text-decoration: none;
         }
         li {
-            margin: 2rem 0;
+            margin: 3rem 0;
+            a {
+                text-decoration: none;
+                position: relative;
+                &.grow::after {
+                    content: ' ';
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    width: 0%;
+                    height: 3px;
+                    border-bottom: 1px solid $huborange;
+                    transition: 0.4s;
+                }
+                &.grow:hover::after {
+                    width: 100%;
+                    left: 0;
+                }
+            }
         }
     }
     .social_buttons__container {
-        color: #fff;
         display: flex;
     }
     .bottom_container {
@@ -36,8 +69,17 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+        margin-bottom: 4rem;
+        font-size: 2rem;
         ul {
             display: flex;
+        }
+        li:not(:last-of-type) {
+            margin-right: 7rem;
+            margin-bottom: 3rem;
+        }
+        a {
+            text-decoration: none;
         }
     }
     li a {

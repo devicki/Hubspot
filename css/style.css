@@ -1,5 +1,33 @@
+@charset "UTF-8";
 .colored-txt {
   color: #F47521; }
+
+.cards {
+  position: relative;
+  perspective: 9999px; }
+
+.card {
+  position: absolute;
+  height: 100%;
+  transition: all 1s ease;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-size: 25px; }
+  .card-front {
+    background: linear-gradient(to right bottom, #f3904f, #3b4371); }
+  .card-back {
+    background: linear-gradient(to right bottom, #c33764, #1d2671);
+    transform: rotateY(180deg); }
+
+.cards:hover .card-front {
+  transform: rotateY(-180deg); }
+
+.cards:hover .card-back {
+  transform: rotateY(0deg); }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -141,7 +169,8 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 10rem; }
   nav .logo {
     flex: 0 1 auto; }
   nav ul.navigationList {
@@ -189,10 +218,11 @@ nav {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr .3fr;
   grid-gap: 10px;
-  height: 80rem;
-  margin-top: 10rem;
-  font-size: 2.3rem; }
+  height: 100rem;
+  font-size: 2.3rem;
+  margin-bottom: 10rem; }
   .container_offers .offer {
     display: flex;
     justify-content: center;
@@ -249,7 +279,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4rem 0; }
+  margin-bottom: 10rem; }
   .benefits_container .title {
     font-size: 2.9rem;
     margin-bottom: 4rem;
@@ -281,7 +311,7 @@ nav {
   grid-gap: 10px;
   height: 80rem;
   font-size: 2.3rem;
-  margin: 10rem 0;
+  margin-bottom: 10rem;
   text-align: center;
   color: #fff; }
   .proof_container .proof_box {
@@ -330,28 +360,62 @@ footer {
   footer .top__container {
     display: flex;
     justify-content: space-between;
-    width: 80%; }
+    width: 80%;
+    font-size: 4.5rem;
+    margin-bottom: 4rem; }
+    footer .top__container h3::before {
+      content: "▶▶";
+      font-size: 4rem;
+      margin-right: 1rem;
+      color: #F47521; }
     footer .top__container ul li {
       display: inline-block; }
+      footer .top__container ul li a:hover {
+        color: #F47521; }
+    footer .top__container ul li:not(:last-of-type) {
+      margin: 0 2rem; }
   footer .middle_boxes_container {
     width: 80%;
-    display: flex; }
+    display: flex;
+    margin-bottom: 4rem; }
     footer .middle_boxes_container .setup__box {
       margin: 5rem 0;
-      margin-right: 7rem; }
+      margin-right: 7rem;
+      text-decoration: none; }
     footer .middle_boxes_container li {
-      margin: 2rem 0; }
+      margin: 3rem 0; }
+      footer .middle_boxes_container li a {
+        text-decoration: none;
+        position: relative; }
+        footer .middle_boxes_container li a.grow::after {
+          content: ' ';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 0%;
+          height: 3px;
+          border-bottom: 1px solid #F47521;
+          transition: 0.4s; }
+        footer .middle_boxes_container li a.grow:hover::after {
+          width: 100%;
+          left: 0; }
   footer .social_buttons__container {
-    color: #fff;
     display: flex; }
   footer .bottom_container {
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end; }
+    align-items: flex-end;
+    margin-bottom: 4rem;
+    font-size: 2rem; }
     footer .bottom_container ul {
       display: flex; }
+    footer .bottom_container li:not(:last-of-type) {
+      margin-right: 7rem;
+      margin-bottom: 3rem; }
+    footer .bottom_container a {
+      text-decoration: none; }
   footer li a {
     color: #fff; }
 
