@@ -4,11 +4,14 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
-    height: 50rem;
+    height: 80rem;
     font-size: 2.3rem;
     margin: 10rem 0;
     text-align: center;
     color: #fff;
+    .proof_box {
+        padding: 5rem 0;
+    }
     .quote__box {
         background-color: $greenlike;
         grid-column: 2;
@@ -16,9 +19,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        p {
+        p:first-of-type {
             width: 50%;
             margin: 0 auto;
+            font-size: 4rem;
         }
     }
     .res__box {
@@ -26,15 +30,24 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
+        font-size: 4rem;
         .all_svg_box {
             display: flex;
+            margin: 5rem 0;
             .svg {
-                margin: 0 2rem;
+                margin: 0 6rem;
             }
         }
     }
     .crm__box {
         background-color: $huborange;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h2,
+        p:first-of-type {
+            font-size: 4rem;
+        }
     }
 }

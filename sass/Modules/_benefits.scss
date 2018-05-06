@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 4rem;
+    margin: 4rem 0;
     .title {
         font-size: 2.9rem;
         margin-bottom: 4rem;
@@ -11,6 +11,7 @@
     }
     h2.title {
         margin-bottom: 8rem;
+        font-size: 5rem;
     }
 }
 
@@ -18,14 +19,15 @@
     display: flex;
     justify-content: center;
     .bbox {
-        padding: 5rem 0;
+        margin: 7rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 2rem;
+        padding: 0 3rem;
         p {
             text-align: center;
-            line-height: 3rem;
+            line-height: 5rem;
+            font-size: 3rem;
         }
     }
 }
