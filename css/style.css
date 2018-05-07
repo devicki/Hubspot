@@ -2,33 +2,6 @@
 .colored-txt {
   color: #F47521; }
 
-.cards {
-  position: relative;
-  perspective: 9999px; }
-
-.card {
-  position: absolute;
-  height: 100%;
-  transition: all 1s ease;
-  backface-visibility: hidden;
-  top: 0;
-  left: 0;
-  border-radius: 3px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  color: #fff;
-  font-size: 25px; }
-  .card-front {
-    background: linear-gradient(to right bottom, #f3904f, #3b4371); }
-  .card-back {
-    background: linear-gradient(to right bottom, #c33764, #1d2671);
-    transform: rotateY(180deg); }
-
-.cards:hover .card-front {
-  transform: rotateY(-180deg); }
-
-.cards:hover .card-back {
-  transform: rotateY(0deg); }
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -165,7 +138,8 @@ body {
   font-size: 1.6rem; }
 
 body {
-  padding: 3rem; }
+  padding: 3rem;
+  position: relative; }
 
 nav {
   display: flex;
@@ -230,7 +204,7 @@ nav {
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
-    transition: all 5s cubic-bezier(0.075, 0.82, 0.165, 1); }
+    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
     .container_offers .offer h1,
     .container_offers .offer p,
     .container_offers .offer button {
@@ -245,7 +219,8 @@ nav {
       grid-column: 2/ 3;
       grid-row: 1 / 3;
       background: url("/img/pexels-photo-265087.jpeg") no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1); }
       .container_offers .offer--big:hover {
         background: url("/img/pexels-photo-265087-onhover.jpeg") no-repeat;
         background-size: cover; }
@@ -313,40 +288,130 @@ nav {
   font-size: 2.3rem;
   margin-bottom: 10rem;
   text-align: center;
+  -webkit-backface-visibility: hidden;
   color: #fff; }
   .proof_container .proof_box {
     padding: 5rem 0; }
-  .proof_container .quote__box {
-    background-color: #14434C;
-    grid-column: 2;
-    grid-row: 1 / span 2;
+  .proof_container .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-around; }
-    .proof_container .quote__box p:first-of-type {
-      width: 50%;
-      margin: 0 auto;
-      font-size: 4rem; }
-  .proof_container .res__box {
-    background-color: #4A5D69;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0; }
+    .proof_container .card-front {
+      background-color: #14434C; }
+    .proof_container .card-back {
+      background-color: #14434C;
+      transform: rotateY(180deg); }
+  .proof_container .quote__box:hover .card-front {
+    transform: rotateY(-180deg); }
+  .proof_container .quote__box:hover .card-back {
+    transform: rotateY(0deg); }
+
+.quote__box {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5rem 0;
+  position: relative;
+  perspective: 9999px; }
+  .quote__box p:first-of-type {
+    width: 50%;
+    margin: 0 auto;
     font-size: 4rem; }
-    .proof_container .res__box .all_svg_box {
-      display: flex;
-      margin: 5rem 0; }
-      .proof_container .res__box .all_svg_box .svg {
-        margin: 0 6rem; }
-  .proof_container .crm__box {
-    background-color: #F47521;
+
+.res__box {
+  background-color: #4A5D69;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 4rem;
+  cursor: pointer; }
+  .res__box .all_svg_box {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around; }
-    .proof_container .crm__box h2,
-    .proof_container .crm__box p:first-of-type {
-      font-size: 4rem; }
+    margin: 5rem 0; }
+    .res__box .all_svg_box .svg {
+      margin: 0 6rem; }
+  .res__box .popup {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    visibility: hidden;
+    cursor: initial; }
+    .res__box .popup__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 75%;
+      background-color: #fff;
+      color: #000;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 4rem; }
+    .res__box .popup__right {
+      width: 50%;
+      text-align: left; }
+      .res__box .popup__right h2 {
+        font-weight: 700;
+        margin: 2rem 0; }
+    .res__box .popup .popup__close {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 5rem;
+      cursor: pointer; }
+
+.crm__box {
+  background-color: #F47521;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  overflow: hidden; }
+  .crm__box h2,
+  .crm__box p:first-of-type {
+    font-size: 4rem; }
+  .crm__box::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg); }
+
+.crm__box:hover::before {
+  -webkit-animation: shine .75s;
+  animation: shine .75s; }
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%; } }
+
+@keyframes shine {
+  100% {
+    left: 125%; } }
 
 footer {
   background-color: #000;

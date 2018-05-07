@@ -8,46 +8,155 @@
     font-size: 2.3rem;
     margin-bottom: 10rem;
     text-align: center;
+    -webkit-backface-visibility: hidden;
     color: #fff;
     .proof_box {
-        padding: 5rem 0;
+        padding: 5rem 0; //padding on all boxes
     }
-    .quote__box {
-        background-color: $greenlike;
-        grid-column: 2;
-        grid-row: 1 / span 2;
+    .card {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        p:first-of-type {
-            width: 50%;
-            margin: 0 auto;
-            font-size: 4rem;
+        height: 100%; //copyhere
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 1s ease;
+        backface-visibility: hidden;
+        top: 0;
+        left: 0;
+        &-front {
+            background-color: $greenlike;
+        }
+        &-back {
+            background-color: $greenlike;
+            transform: rotateY(180deg);
         }
     }
-    .res__box {
-        background-color: $greyish;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+    .quote__box:hover .card-front {
+        transform: rotateY(-180deg);
+    }
+    .quote__box:hover .card-back {
+        transform: rotateY(0deg);
+    }
+}
+
+// quote box
+.quote__box {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem 0;
+    position: relative;
+    perspective: 9999px;
+    p:first-of-type {
+        width: 50%;
+        margin: 0 auto;
         font-size: 4rem;
-        .all_svg_box {
-            display: flex;
-            margin: 5rem 0;
-            .svg {
-                margin: 0 6rem;
-            }
+    }
+}
+
+// res box and popup
+.res__box {
+    background-color: $greyish;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 4rem;
+    cursor: pointer;
+    .all_svg_box {
+        display: flex;
+        margin: 5rem 0;
+        .svg {
+            margin: 0 6rem;
         }
     }
-    .crm__box {
-        background-color: $huborange;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        h2,
-        p:first-of-type {
-            font-size: 4rem;
+    .popup {
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        visibility: hidden;
+        cursor: initial;
+        &__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 75%;
+            background-color: #fff;
+            color: #000;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 4rem;
         }
+        &__right {
+            h2 {
+                font-weight: 700;
+                margin: 2rem 0;
+            }
+            width: 50%;
+            text-align: left;
+        }
+        .popup__close {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+//crm box
+.crm__box {
+    background-color: $huborange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    h2,
+    p:first-of-type {
+        font-size: 4rem;
+    }
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -75%;
+        z-index: 2;
+        display: block;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+        -webkit-transform: skewX(-25deg);
+        transform: skewX(-25deg);
+    }
+}
+
+.crm__box:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
     }
 }
