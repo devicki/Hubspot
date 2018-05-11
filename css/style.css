@@ -350,7 +350,6 @@ nav {
     top: 0;
     left: 0;
     z-index: 9999;
-    visibility: hidden;
     cursor: initial; }
     .res__box .popup__content {
       position: absolute;
