@@ -69,5 +69,8 @@
                 margin-left: 3rem;
             }
         }
+        &:hover>button.btn {
+            background-color: #fff;
+        }
     }
 }

@@ -175,7 +175,6 @@ nav {
         width: 100%;
         left: 0; }
     nav ul.navigationList li input {
-      border: none;
       padding: 10px 0;
       font-size: 1.8rem;
       width: 15rem; }
@@ -186,9 +185,11 @@ nav {
       vertical-align: top;
       font-size: 3rem;
       margin-right: 4rem; }
-    nav ul.navigationList .ion-android-search {
+    nav ul.navigationList .ion-ios-search {
+      display: inline-block;
       font-size: 3.3rem;
-      margin-left: 2rem; }
+      margin-left: 2rem;
+      cursor: pointer; }
 
 .container_offers {
   display: grid;
@@ -250,6 +251,8 @@ nav {
       flex-wrap: wrap; }
       .container_offers .offer .wide-content .btn--info {
         margin-left: 3rem; }
+    .container_offers .offer:hover > button.btn {
+      background-color: #fff; }
 
 .benefits_container {
   display: flex;
@@ -277,6 +280,9 @@ nav {
       text-align: center;
       line-height: 5rem;
       font-size: 3rem; }
+  .benefits__boxes .icon {
+    font-size: 4rem;
+    color: #000; }
 
 .proof_container {
   display: grid;
@@ -520,8 +526,15 @@ section.contact {
     width: 40%;
     display: block;
     outline: 3px solid transparent; }
+    .form__group .form__input:focus {
+      outline: 3px solid #F47521;
+      border: 3px solid transparent; }
   .form__group .form__radio-group {
     display: inline-block; }
+  .form__group .form__radio-label {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 2rem; }
 
 form {
   display: flex;
@@ -529,18 +542,11 @@ form {
   align-items: left;
   flex-direction: column; }
 
-.form__input:focus {
-  outline: 3px solid #F47521;
-  border: 3px solid transparent; }
-
-.form__radio-label {
-  font-size: 2rem;
-  cursor: pointer; }
-
 .btn {
   padding: 1.2rem 2rem;
   border-radius: 4px;
   font-size: 1.8rem;
+  transition: all 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer; }
   .btn:focus {
     outline: none; }
@@ -550,3 +556,5 @@ form {
   .btn--info {
     background: #F47521;
     border: 3px solid #F47521; }
+    .btn--info:hover {
+      border: 3px solid #000; }

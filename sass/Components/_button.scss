@@ -2,6 +2,7 @@
     padding: 1.2rem 2rem;
     border-radius: 4px;
     font-size: 1.8rem;
+    transition: all 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
     &:focus {
         outline: none;
@@ -13,5 +14,8 @@
     &--info {
         background: $huborange;
         border: 3px solid $huborange;
+        &:hover {
+            border: 3px solid $dark;
+        }
     }
 }

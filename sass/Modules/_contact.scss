@@ -39,9 +39,18 @@ section.contact {
         width: 40%;
         display: block;
         outline: 3px solid transparent;
+        &:focus {
+            outline: 3px solid $huborange;
+            border: 3px solid transparent;
+        }
     }
     .form__radio-group {
         display: inline-block;
+    }
+    .form__radio-label {
+        font-size: 2rem;
+        cursor: pointer;
+        margin-right: 2rem;
     }
 }
 
@@ -50,14 +59,4 @@ form {
     justify-content: center;
     align-items: left;
     flex-direction: column;
-}
-
-.form__input:focus {
-    outline: 3px solid $huborange;
-    border: 3px solid transparent;
-}
-
-.form__radio-label {
-    font-size: 2rem;
-    cursor: pointer;
 }
