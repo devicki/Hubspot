@@ -26,17 +26,21 @@ nav {
         }
         li:last-child::before {
             content: "\007c";
+            color: $huborange;
             vertical-align: sub;
             font-size: 3rem;
             margin-right: 4rem;
         }
         .ion-ios-search {
             display: inline-block;
-            font-size: 3.5rem;
+            font-size: 4rem;
             padding: 1rem 0;
             vertical-align: middle;
             margin-left: 2rem;
             cursor: pointer;
+            &:hover {
+                color: $huborange;
+            }
         }
     }
 }

@@ -14,10 +14,19 @@
   height: 1px;
   border-bottom: 4px solid #F47521;
   transition: 0.4s; }
+  .grow::after:hover::after {
+    width: 100%;
+    left: 0; }
 
-.grow:hover::after {
-  width: 100%;
-  left: 0; }
+.grad-txt {
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#F47521), to(#4A5D69));
+  background-image: linear-gradient(to right, #F47521, #4A5D69);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .4rem; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -183,16 +192,19 @@ nav {
         outline: 3px solid #F47521; }
     nav ul.navigationList li:last-child::before {
       content: "\007c";
+      color: #F47521;
       vertical-align: sub;
       font-size: 3rem;
       margin-right: 4rem; }
     nav ul.navigationList .ion-ios-search {
       display: inline-block;
-      font-size: 3.5rem;
+      font-size: 4rem;
       padding: 1rem 0;
       vertical-align: middle;
       margin-left: 2rem;
       cursor: pointer; }
+      nav ul.navigationList .ion-ios-search:hover {
+        color: #F47521; }
 
 .container_offers {
   display: grid;
@@ -201,7 +213,9 @@ nav {
   grid-template-rows: 1fr 1fr .3fr;
   grid-gap: 10px;
   height: 100rem;
-  font-size: 2.3rem; }
+  font-size: 2.6rem;
+  font-weight: 400;
+  text-shadow: -1px -1px 0 #747474; }
   .container_offers .offer {
     display: flex;
     justify-content: center;
@@ -218,8 +232,7 @@ nav {
       font-size: 4rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow: -1px -1px 0 #747474; }
+      letter-spacing: 3px; }
     .container_offers .offer--big {
       grid-column: 2/ 3;
       grid-row: 1 / 3;
@@ -360,6 +373,7 @@ nav {
     z-index: 9999;
     cursor: initial; }
     .res__box .popup__content {
+      border: solid 3px #F47521;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -370,13 +384,20 @@ nav {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 4rem; }
+      padding: 5rem 4rem; }
     .res__box .popup__right {
+      line-height: 5rem;
       width: 50%;
       text-align: left; }
       .res__box .popup__right h2 {
         font-weight: 700;
-        margin: 2rem 0; }
+        margin: 2rem 0;
+        font-size: 3.5rem; }
+        .res__box .popup__right h2::before {
+          content: "▶▶";
+          font-size: 4rem;
+          margin-right: 1rem;
+          color: #F47521; }
     .res__box .popup .popup__close {
       position: absolute;
       top: 1rem;
@@ -497,15 +518,7 @@ section.contact {
 .form__group {
   margin: 5rem 5rem 0 5rem; }
   .form__group h2 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: inline-block;
-    background-image: -webkit-gradient(linear, left top, right top, from(#F47521), to(#4A5D69));
-    background-image: linear-gradient(to right, #F47521, #4A5D69);
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: .4rem; }
+    font-size: 3.5rem; }
   .form__group .form__input {
     font-size: 1.5rem;
     font-family: inherit;

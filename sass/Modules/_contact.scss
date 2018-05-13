@@ -19,14 +19,6 @@ section.contact {
     margin: 5rem 5rem 0 5rem;
     h2 {
         font-size: 3.5rem;
-        text-transform: uppercase;
-        font-weight: 700;
-        display: inline-block;
-        background-image: -webkit-gradient(linear, left top, right top, from($huborange), to($greyish));
-        background-image: linear-gradient(to right, $huborange, $greyish);
-        -webkit-background-clip: text;
-        color: transparent;
-        letter-spacing: .4rem;
     }
     .form__input {
         font-size: 1.5rem;

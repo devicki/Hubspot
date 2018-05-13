@@ -84,6 +84,7 @@
         z-index: 9999;
         cursor: initial;
         &__content {
+            border: solid 3px $huborange;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -94,15 +95,23 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding: 4rem;
+            padding: 5rem 4rem;
         }
         &__right {
+            line-height: 5rem;
+            width: 50%;
+            text-align: left;
             h2 {
                 font-weight: 700;
                 margin: 2rem 0;
+                font-size: 3.5rem;
+                &::before {
+                    content: "▶▶";
+                    font-size: 4rem;
+                    margin-right: 1rem;
+                    color: $huborange;
+                }
             }
-            width: 50%;
-            text-align: left;
         }
         .popup__close {
             position: absolute;
