@@ -2,6 +2,9 @@
 .colored-txt {
   color: #F47521; }
 
+.u-margin-bottom-medium {
+  margin-bottom: 10rem; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -143,8 +146,7 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10rem; }
+  justify-content: space-between; }
   nav .logo {
     flex: 0 1 auto; }
   nav ul.navigationList {
@@ -195,8 +197,7 @@ nav {
   grid-template-rows: 1fr 1fr .3fr;
   grid-gap: 10px;
   height: 100rem;
-  font-size: 2.3rem;
-  margin-bottom: 10rem; }
+  font-size: 2.3rem; }
   .container_offers .offer {
     display: flex;
     justify-content: center;
@@ -253,8 +254,7 @@ nav {
 .benefits_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 10rem; }
+  align-items: center; }
   .benefits_container .title {
     font-size: 2.9rem;
     margin-bottom: 4rem;
@@ -286,7 +286,6 @@ nav {
   grid-gap: 10px;
   height: 80rem;
   font-size: 2.3rem;
-  margin-bottom: 10rem;
   text-align: center;
   -webkit-backface-visibility: hidden;
   color: #fff; }
@@ -482,6 +481,61 @@ footer {
       text-decoration: none; }
   footer li a {
     color: #fff; }
+
+section.contact {
+  background-color: #4A5D69;
+  display: flex;
+  padding: 5rem;
+  justify-content: center;
+  align-items: center; }
+  section.contact .content {
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 30%, transparent 50%), url(../../img/bgc.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    width: 90%;
+    height: 630px; }
+
+.form__group {
+  margin: 5rem 5rem 0 5rem; }
+  .form__group h2 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: -webkit-gradient(linear, left top, right top, from(#F47521), to(#4A5D69));
+    background-image: linear-gradient(to right, #F47521, #4A5D69);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .4rem; }
+  .form__group .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rbga(#fff, 0.5);
+    border: #14434C 3px solid;
+    width: 40%;
+    display: block;
+    outline: 3px solid transparent; }
+  .form__group .form__radio-group {
+    display: inline-block; }
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column; }
+
+.form__input:focus {
+  outline: 3px solid #F47521;
+  border: 3px solid transparent; }
+
+.form__radio-label {
+  font-size: 2rem;
+  cursor: pointer; }
 
 .btn {
   padding: 1.2rem 2rem;
