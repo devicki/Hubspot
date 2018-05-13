@@ -43,20 +43,6 @@ footer {
             a {
                 text-decoration: none;
                 position: relative;
-                &.grow::after {
-                    content: ' ';
-                    position: absolute;
-                    top: 100%;
-                    left: 50%;
-                    width: 0%;
-                    height: 3px;
-                    border-bottom: 1px solid $huborange;
-                    transition: 0.4s;
-                }
-                &.grow:hover::after {
-                    width: 100%;
-                    left: 0;
-                }
             }
         }
     }

@@ -5,6 +5,20 @@
 .u-margin-bottom-medium {
   margin-bottom: 10rem; }
 
+.grow::after {
+  content: ' ';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  border-bottom: 4px solid #F47521;
+  transition: 0.4s; }
+
+.grow:hover::after {
+  width: 100%;
+  left: 0; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -147,8 +161,6 @@ body {
 nav {
   display: flex;
   justify-content: space-between; }
-  nav .logo {
-    flex: 0 1 auto; }
   nav ul.navigationList {
     display: flex;
     flex-wrap: wrap;
@@ -161,33 +173,24 @@ nav {
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 700;
-      font-size: 2.3rem; }
-      nav ul.navigationList a.grow::after {
-        content: ' ';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        width: 0%;
-        height: 3px;
-        border-bottom: 1px solid #F47521;
-        transition: 0.4s; }
-      nav ul.navigationList a.grow:hover::after {
-        width: 100%;
-        left: 0; }
+      font-size: 2.5rem; }
     nav ul.navigationList li input {
-      padding: 10px 0;
-      font-size: 1.8rem;
-      width: 15rem; }
+      border: #14434C 3px solid;
+      font-size: 2rem;
+      padding: .6rem 0; }
       nav ul.navigationList li input:focus {
-        outline: none; }
+        border: 3px solid transparent;
+        outline: 3px solid #F47521; }
     nav ul.navigationList li:last-child::before {
       content: "\007c";
-      vertical-align: top;
+      vertical-align: sub;
       font-size: 3rem;
       margin-right: 4rem; }
     nav ul.navigationList .ion-ios-search {
       display: inline-block;
-      font-size: 3.3rem;
+      font-size: 3.5rem;
+      padding: 1rem 0;
+      vertical-align: middle;
       margin-left: 2rem;
       cursor: pointer; }
 
@@ -456,18 +459,6 @@ footer {
       footer .middle_boxes_container li a {
         text-decoration: none;
         position: relative; }
-        footer .middle_boxes_container li a.grow::after {
-          content: ' ';
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          width: 0%;
-          height: 3px;
-          border-bottom: 1px solid #F47521;
-          transition: 0.4s; }
-        footer .middle_boxes_container li a.grow:hover::after {
-          width: 100%;
-          left: 0; }
   footer .social_buttons__container {
     display: flex; }
   footer .bottom_container {

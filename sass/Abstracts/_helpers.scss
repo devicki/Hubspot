@@ -5,3 +5,20 @@
 .u-margin-bottom-medium {
     margin-bottom: 10rem;
 }
+
+//Hover effect on links = class grow
+.grow::after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0%;
+    height: 1px;
+    border-bottom: 4px solid $huborange;
+    transition: 0.4s;
+}
+
+.grow:hover::after {
+    width: 100%;
+    left: 0;
+}
