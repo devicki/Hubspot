@@ -26,3 +26,25 @@
         searchbar.toggle('slow');
     })
 })();
+
+//SCROLL TO TOP
+(function () {
+    let scrollDiv = $("a[href='#top']");
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            scrollDiv.fadeIn();
+        } else {
+            scrollDiv.fadeOut();
+        }
+    });
+
+    scrollDiv.click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, "slow");
+        return false;
+    });
+
+
+})();

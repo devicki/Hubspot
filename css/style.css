@@ -168,6 +168,19 @@ body {
   padding: 3rem;
   position: relative; }
 
+#top {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: #F47521;
+  z-index: 9999;
+  border: 3px solid #000;
+  display: none; }
+  #top i.icon {
+    color: white;
+    font-size: 7rem;
+    padding: 1rem .5rem; }
+
 nav {
   display: flex;
   justify-content: space-between; }

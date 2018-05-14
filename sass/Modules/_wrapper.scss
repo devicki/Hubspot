@@ -2,3 +2,18 @@ body {
     padding: 3rem;
     position: relative;
 }
+
+#top {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background-color: $huborange;
+    z-index: 9999;
+    border: 3px solid $dark;
+    display: none;
+    i.icon {
+        color: white;
+        font-size: 7rem;
+        padding: 1rem .5rem;
+    }
+}
