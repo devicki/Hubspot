@@ -15,7 +15,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         text-align: center;
-        transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
         & h1,
         p,
         button {
@@ -32,7 +32,8 @@
             grid-row: 1 / 3;
             background: url("/img/pexels-photo-265087.jpeg") no-repeat;
             background-size: cover;
-            transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+            -moz-transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
             &:hover {
                 background: url("/img/pexels-photo-265087-onhover.jpeg") no-repeat;
                 background-size: cover;

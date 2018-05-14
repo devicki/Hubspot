@@ -28,7 +28,7 @@ section.contact {
         border-radius: 2px;
         background-color: rbga($light, 0.5);
         border: $greenlike 3px solid;
-        width: 40%;
+        min-width: 40%;
         display: block;
         outline: 3px solid transparent;
         &:focus {
