@@ -3,41 +3,47 @@ nav {
     justify-content: space-between;
     ul.navigationList {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
         width: 75%;
+        li {
+            margin: 0 1rem;
+        }
+        li.special-flex {
+            display: flex;
+            height: 40px;
+        }
         a {
             color: $greenlike;
             position: relative;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
         } // Search module
         li input {
             border: $greenlike 3px solid;
             font-size: 2rem;
             padding: .6rem 0;
+            width: 200px;
             &:focus {
                 border: 3px solid transparent;
                 outline: 3px solid $huborange;
             }
-        }
-        li:last-child::before {
-            content: "\007c";
-            color: $huborange;
-            vertical-align: sub;
-            font-size: 3rem;
-            margin-right: 4rem;
-        }
+        } // li:last-child::before {
+        //     content: "\007c";
+        //     color: $huborange;
+        //     vertical-align: sub;
+        //     font-size: 3rem;
+        //     margin-right: 4rem;
+        // }
         .ion-ios-search {
             display: inline-block;
             font-size: 4rem;
-            padding: 1rem 0;
-            vertical-align: middle;
             margin-left: 2rem;
             cursor: pointer;
+            line-height: -215%;
             &:hover {
                 color: $huborange;
             }

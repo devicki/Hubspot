@@ -1,6 +1,7 @@
 .proof_container {
     display: grid;
     width: 100%;
+    grid-template-areas: "res__box quote__box" "crm__box quote__box";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
@@ -42,8 +43,7 @@
 
 // quote box
 .quote__box {
-    grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-area: quote__box;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -60,6 +60,7 @@
 
 // res box and popup
 .res__box {
+    grid-area: res__box;
     background-color: $greyish;
     display: flex;
     flex-direction: column;
@@ -125,6 +126,7 @@
 
 //crm box
 .crm__box {
+    grid-area: crm__box;
     background-color: $huborange;
     display: flex;
     flex-direction: column;

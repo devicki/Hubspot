@@ -1,0 +1,111 @@
+///////////////////////// 
+///// MEDIA QUERIES /////
+/////////////////////////
+//Default html font size is 62.5%; screens above 1324px to 1800px.
+@media only screen and (max-width: 1324px) {
+    html {
+        font-size: 50%;
+    }
+    ul.navigationList {
+        justify-content: flex-start;
+        justify-items: flex-end;
+        flex-wrap: wrap;
+        li {
+            flex-basis: 150px;
+        }
+        li:last-child::before {
+            content: "";
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 42%;
+    }
+    ul.navigationList {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        li:last-child {
+            min-width: 200px;
+            a {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    html {
+        font-size: 32%;
+    }
+}
+
+@media only screen and (max-width: 1422px) {
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        ul.navigationList {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 75%;
+            li {
+                margin: 0 1rem;
+                flex-basis: 30px;
+            }
+            li.special-flex {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        .ion-ios-search {
+            display: inline;
+            font-size: 4rem;
+            padding: 2rem 0;
+            vertical-align: middle;
+            margin-left: 0rem;
+            cursor: pointer;
+            &:hover {
+                color: $huborange;
+            }
+        }
+    }
+    div.container_offers {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        .offer--big {
+            grid-column: 1/ -1;
+            grid-row: 1 /2;
+        }
+        .offer--wide {
+            grid-column: 1/1;
+            grid-row: 4/5;
+        }
+        .offer--small {
+            grid-column: 1/1;
+            grid-row: 3/4;
+        }
+    }
+    div.proof_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "res__box" "crm__box" "quote__box";
+        .card {
+            margin: 3rem 0;
+            padding: 10rem 0;
+        }
+    }
+    section.contact {
+        margin-top: 26rem;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    html {
+        font-size: 70%;
+    }
+}

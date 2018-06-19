@@ -164,6 +164,86 @@ html {
 body {
   font-size: 1.6rem; }
 
+@media only screen and (max-width: 1324px) {
+  html {
+    font-size: 50%; }
+  ul.navigationList {
+    justify-content: flex-start;
+    justify-items: flex-end;
+    flex-wrap: wrap; }
+    ul.navigationList li {
+      flex-basis: 150px; }
+    ul.navigationList li:last-child::before {
+      content: ""; } }
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 42%; }
+  ul.navigationList {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; }
+    ul.navigationList li:last-child {
+      min-width: 200px; }
+      ul.navigationList li:last-child a {
+        text-align: left; } }
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 32%; } }
+
+@media only screen and (max-width: 1422px) {
+  nav {
+    display: flex;
+    justify-content: flex-start; }
+    nav ul.navigationList {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 75%; }
+      nav ul.navigationList li {
+        margin: 0 1rem;
+        flex-basis: 30px; }
+      nav ul.navigationList li.special-flex {
+        display: flex;
+        flex-direction: row; }
+    nav .ion-ios-search {
+      display: inline;
+      font-size: 4rem;
+      padding: 2rem 0;
+      vertical-align: middle;
+      margin-left: 0rem;
+      cursor: pointer; }
+      nav .ion-ios-search:hover {
+        color: #F47521; }
+  div.container_offers {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto; }
+    div.container_offers .offer--big {
+      grid-column: 1/ -1;
+      grid-row: 1 /2; }
+    div.container_offers .offer--wide {
+      grid-column: 1/1;
+      grid-row: 4/5; }
+    div.container_offers .offer--small {
+      grid-column: 1/1;
+      grid-row: 3/4; }
+  div.proof_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "res__box" "crm__box" "quote__box"; }
+    div.proof_container .card {
+      margin: 3rem 0;
+      padding: 10rem 0; }
+  section.contact {
+    margin-top: 26rem; } }
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 70%; } }
+
 body {
   padding: 3rem;
   position: relative; }
@@ -186,37 +266,36 @@ nav {
   justify-content: space-between; }
   nav ul.navigationList {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     width: 75%; }
+    nav ul.navigationList li {
+      margin: 0 1rem; }
+    nav ul.navigationList li.special-flex {
+      display: flex;
+      height: 40px; }
     nav ul.navigationList a {
       color: #14434C;
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 700;
-      font-size: 2.5rem; }
+      font-size: 2.2rem; }
     nav ul.navigationList li input {
       border: #14434C 3px solid;
       font-size: 2rem;
-      padding: .6rem 0; }
+      padding: .6rem 0;
+      width: 200px; }
       nav ul.navigationList li input:focus {
         border: 3px solid transparent;
         outline: 3px solid #F47521; }
-    nav ul.navigationList li:last-child::before {
-      content: "\007c";
-      color: #F47521;
-      vertical-align: sub;
-      font-size: 3rem;
-      margin-right: 4rem; }
     nav ul.navigationList .ion-ios-search {
       display: inline-block;
       font-size: 4rem;
-      padding: 1rem 0;
-      vertical-align: middle;
       margin-left: 2rem;
-      cursor: pointer; }
+      cursor: pointer;
+      line-height: -215%; }
       nav ul.navigationList .ion-ios-search:hover {
         color: #F47521; }
 
@@ -224,7 +303,7 @@ nav {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr .3fr;
+  grid-template-rows: auto auto auto;
   grid-gap: 10px;
   height: 100rem;
   font-size: 2.6rem;
@@ -265,7 +344,9 @@ nav {
       letter-spacing: 2px; }
     .container_offers .offer--small:first-child {
       background: url("/img/pexels-photo-574077.jpeg") no-repeat;
-      background-size: cover; }
+      background-size: cover;
+      grid-column: 1/2;
+      grid-row: 2/3; }
       .container_offers .offer--small:first-child:hover {
         background: url("/img/pexels-photo-574077-onhover.jpeg") no-repeat;
         background-size: cover; }
@@ -300,13 +381,14 @@ nav {
 
 .benefits__boxes {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-content: flex-start; }
   .benefits__boxes .bbox {
     margin: 7rem 0;
     display: flex;
     flex-direction: column;
+    align-content: flex-start;
     align-items: center;
-    justify-content: space-between;
     padding: 0 3rem; }
     .benefits__boxes .bbox p {
       text-align: center;
@@ -319,11 +401,13 @@ nav {
     color: #000;
     margin: 0;
     margin-top: 10rem;
-    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1); }
+    transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    justify-self: flex-end; }
 
 .proof_container {
   display: grid;
   width: 100%;
+  grid-template-areas: "res__box quote__box" "crm__box quote__box";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
@@ -357,8 +441,7 @@ nav {
     transform: rotateY(0deg); }
 
 .quote__box {
-  grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-area: quote__box;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -372,6 +455,7 @@ nav {
     font-size: 4rem; }
 
 .res__box {
+  grid-area: res__box;
   background-color: #4A5D69;
   display: flex;
   flex-direction: column;
@@ -427,6 +511,7 @@ nav {
       cursor: pointer; }
 
 .crm__box {
+  grid-area: crm__box;
   background-color: #F47521;
   display: flex;
   flex-direction: column;
@@ -529,7 +614,7 @@ section.contact {
   align-items: center; }
   section.contact .content {
     background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 30%, transparent 50%), url(../../img/bgc.jpg);
-    background-size: 100%;
+    background-size: cover;
     border-radius: 3px;
     -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
