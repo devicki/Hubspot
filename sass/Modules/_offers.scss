@@ -19,7 +19,11 @@
         & h1,
         p,
         button {
-            margin: 15px 0;
+            margin: 1rem 0;
+        }
+        .btn--info {
+            padding: 2.3rem 1.5rem;
+            margin-left: 3rem;
         }
         h1 {
             font-size: 4rem;
@@ -68,10 +72,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
-            .btn--info {
-                margin-left: 3rem;
-            }
+            margin: 0 auto;
         }
         &:hover>button.btn {
             background-color: #fff;

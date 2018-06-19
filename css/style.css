@@ -5,6 +5,9 @@
 .u-margin-bottom-medium {
   margin-bottom: 10rem; }
 
+.u-margin-bottom-small {
+  margin-bottom: 4rem; }
+
 .grow::after {
   content: '';
   position: absolute;
@@ -186,7 +189,23 @@ body {
     ul.navigationList li:last-child {
       min-width: 200px; }
       ul.navigationList li:last-child a {
-        text-align: left; } }
+        text-align: left; }
+  .benefits__boxes {
+    display: flex;
+    flex-direction: column;
+    align-content: center; }
+    .benefits__boxes .bbox {
+      margin: 0; }
+  section.contact .content {
+    height: 400px; } }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column; }
+  nav ul.navigationList {
+    margin: 4rem 0; }
 
 @media only screen and (max-width: 450px) {
   html {
@@ -211,7 +230,6 @@ body {
     nav .ion-ios-search {
       display: inline;
       font-size: 4rem;
-      padding: 2rem 0;
       vertical-align: middle;
       margin-left: 0rem;
       cursor: pointer; }
@@ -220,13 +238,17 @@ body {
   div.container_offers {
     display: grid;
     grid-template-columns: 1fr;
+    justify-content: center;
     grid-template-rows: auto auto auto auto; }
+    div.container_offers .offer {
+      padding: 5rem 0; }
     div.container_offers .offer--big {
       grid-column: 1/ -1;
       grid-row: 1 /2; }
     div.container_offers .offer--wide {
       grid-column: 1/1;
-      grid-row: 4/5; }
+      grid-row: 4/5;
+      padding: 5rem 1rem; }
     div.container_offers .offer--small {
       grid-column: 1/1;
       grid-row: 3/4; }
@@ -235,10 +257,15 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "res__box" "crm__box" "quote__box"; }
     div.proof_container .card {
-      margin: 3rem 0;
       padding: 10rem 0; }
   section.contact {
-    margin-top: 26rem; } }
+    margin-top: 26rem; }
+  .wide-content {
+    flex-direction: column; }
+  div.benefits_container {
+    margin-top: 15rem; }
+    div.benefits_container .bbox {
+      margin: 1rem 0; } }
 
 @media only screen and (min-width: 1800px) {
   html {
@@ -269,7 +296,8 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    width: 75%; }
+    width: 75%;
+    margin-top: 3rem 0; }
     nav ul.navigationList li {
       margin: 0 1rem; }
     nav ul.navigationList li.special-flex {
@@ -320,7 +348,10 @@ nav {
     .container_offers .offer h1,
     .container_offers .offer p,
     .container_offers .offer button {
-      margin: 15px 0; }
+      margin: 1rem 0; }
+    .container_offers .offer .btn--info {
+      padding: 2.3rem 1.5rem;
+      margin-left: 3rem; }
     .container_offers .offer h1 {
       font-size: 4rem;
       font-weight: 700;
@@ -360,24 +391,24 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap; }
-      .container_offers .offer .wide-content .btn--info {
-        margin-left: 3rem; }
+      margin: 0 auto; }
     .container_offers .offer:hover > button.btn {
       background-color: #fff; }
 
 .benefits_container {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 0rem; }
   .benefits_container .title {
     font-size: 2.9rem;
     margin-bottom: 4rem;
     text-transform: uppercase;
     color: #F47521; }
   .benefits_container h2.title {
-    margin-bottom: 8rem;
-    font-size: 5rem; }
+    margin: 3rem 0;
+    font-size: 5rem;
+    text-align: center; }
 
 .benefits__boxes {
   display: flex;
@@ -388,6 +419,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     padding: 0 3rem; }
     .benefits__boxes .bbox p {
@@ -406,7 +438,7 @@ nav {
 
 .proof_container {
   display: grid;
-  width: 100%;
+  max-width: 100%;
   grid-template-areas: "res__box quote__box" "crm__box quote__box";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -424,7 +456,7 @@ nav {
     justify-content: space-around;
     height: 100%;
     position: absolute;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     transition: all 1s ease;
     backface-visibility: hidden;
@@ -446,9 +478,9 @@ nav {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 5rem 0;
   position: relative;
-  perspective: 9999px; }
+  perspective: 9999px;
+  padding: 5rem 0; }
   .quote__box p:first-of-type {
     width: 50%;
     margin: 0 auto;
@@ -619,7 +651,8 @@ section.contact {
     -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
     width: 90%;
-    height: 630px; }
+    height: auto;
+    padding: 4rem 0; }
 
 .form__group {
   margin: 5rem 5rem 0 5rem; }
@@ -665,6 +698,7 @@ form {
     border: 3px solid black; }
   .btn--info {
     background: #F47521;
-    border: 3px solid #F47521; }
+    border: 3px solid #F47521;
+    line-height: 1rem; }
     .btn--info:hover {
       border: 3px solid #000; }
