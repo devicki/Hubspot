@@ -17,6 +17,12 @@
             content: "";
         }
     }
+    section.contact {
+        margin-top: 92rem;
+        .content {
+            height: 400px;
+        }
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -40,11 +46,6 @@
         align-content: center;
         .bbox {
             margin: 0;
-        }
-    }
-    section.contact {
-        .content {
-            height: 400px;
         }
     }
 }
@@ -126,9 +127,13 @@ nav {
         .card {
             padding: 10rem 0;
         }
-    }
-    section.contact {
-        margin-top: 26rem;
+        .card-front,
+        .card-back {
+            padding: 15rem 0;
+        }
+        .proof_box {
+            padding: 10rem 0;
+        }
     }
     .wide-content {
         flex-direction: column;
@@ -138,6 +143,19 @@ nav {
         .bbox {
             margin: 1rem 0;
         }
+    }
+    .all_svg_box {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .realsvg {
+        width: 100px;
+        height: 100px;
+        margin: 3rem 0;
+    }
+    .realsvg2 {
+        width: 25px;
+        height: 25px;
     }
 }
 

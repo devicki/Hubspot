@@ -177,7 +177,11 @@ body {
     ul.navigationList li {
       flex-basis: 150px; }
     ul.navigationList li:last-child::before {
-      content: ""; } }
+      content: ""; }
+  section.contact {
+    margin-top: 92rem; }
+    section.contact .content {
+      height: 400px; } }
 
 @media only screen and (max-width: 900px) {
   html {
@@ -195,9 +199,7 @@ body {
     flex-direction: column;
     align-content: center; }
     .benefits__boxes .bbox {
-      margin: 0; }
-  section.contact .content {
-    height: 400px; } }
+      margin: 0; } }
 
 nav {
   display: flex;
@@ -258,14 +260,27 @@ nav {
     grid-template-areas: "res__box" "crm__box" "quote__box"; }
     div.proof_container .card {
       padding: 10rem 0; }
-  section.contact {
-    margin-top: 26rem; }
+    div.proof_container .card-front,
+    div.proof_container .card-back {
+      padding: 15rem 0; }
+    div.proof_container .proof_box {
+      padding: 10rem 0; }
   .wide-content {
     flex-direction: column; }
   div.benefits_container {
     margin-top: 15rem; }
     div.benefits_container .bbox {
-      margin: 1rem 0; } }
+      margin: 1rem 0; }
+  .all_svg_box {
+    flex-direction: column;
+    justify-content: space-around; }
+  .realsvg {
+    width: 100px;
+    height: 100px;
+    margin: 3rem 0; }
+  .realsvg2 {
+    width: 25px;
+    height: 25px; } }
 
 @media only screen and (min-width: 1800px) {
   html {
